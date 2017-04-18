@@ -1,2 +1,5 @@
-/*swp
-/*class
+# ignore java class files, jars etc
+*.class
+*.jar
+*.java~
+*.swp
