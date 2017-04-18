@@ -3,11 +3,15 @@ import java.util.*;
 
 public class Graph {
     Set<Vertex> vertexSet;
-    Map<Vertex, Edge> edgeMap;
+    Map<Vertex, List<Edge>> edgeMap;
 
-    void Graph() {
+    Graph() {
         vertexSet = new HashSet<>();
         edgeMap = new HashMap<>();
+    }
+
+    public Iterator<Vertex> getVertexIterator() {
+        return vertexSet.iterator();
     }
 
     void addVertex(Vertex v) {
@@ -15,7 +19,14 @@ public class Graph {
     }
 
     void addEdge(Edge e) {
-        edgeMap.put(e.u, e);
-        e.u.addEdge(e);
+        List<Edge> edgeList = edgeMap.get(e.u);
+
+        if (edgeList == null) {
+            edgeList = new ArrayList<>();
+            e.u.addEdgeList(edgeList);
+            edgeMap.put(e.u, edgeList);
+        }
+        
+        edgeList.add(e);
     }
 }

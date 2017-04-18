@@ -14,4 +14,8 @@ public class Edge {
         this.cost = cost;
         this.capacity = capacity;
     }
+
+    public Vertex getV() {
+        return v;
+    }
 }
