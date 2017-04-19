@@ -6,6 +6,7 @@ public class Vertex {
     Boolean visited = false;
     String name;
     static Integer id = new Integer(0);
+    int distance;
 
     Vertex() {
         adjList = new ArrayList<>();
@@ -32,6 +33,12 @@ public class Vertex {
     public List<Edge> getEdgeList() {
         return adjList;
     }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
 }
-
-

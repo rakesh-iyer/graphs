@@ -4,7 +4,6 @@ import java.util.*;
 public class Edge {
     Vertex u, v;
     int cost;
-    int distance;
     int capacity;
     int flow;
 
@@ -17,5 +16,13 @@ public class Edge {
 
     public Vertex getV() {
         return v;
+    }
+
+    public Vertex getU() {
+        return u;
+    }
+
+    public int getCost() {
+        return cost;
     }
 }
