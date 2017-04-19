@@ -4,6 +4,7 @@ import java.util.*;
 public class Vertex {
     List<Edge> adjList;
     Boolean visited = false;
+    Vertex previous;
     String name;
     static Integer id = new Integer(0);
     int distance;
@@ -40,5 +41,13 @@ public class Vertex {
 
     public void setDistance(int distance) {
         this.distance = distance;
+    }
+
+    public Vertex getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(Vertex previous) {
+        this.previous = previous;
     }
 }
