@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Vertex {
     List<Edge> adjList;
-    Boolean visited;
+    Boolean visited = false;
     String name;
     static Integer id = new Integer(0);
 
