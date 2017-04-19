@@ -14,6 +14,10 @@ public class Graph {
         return vertexSet.iterator();
     }
 
+    public int getVertexCount() {
+        return vertexSet.size();
+    }
+
     void addVertex(Vertex v) {
         vertexSet.add(v);
     }
