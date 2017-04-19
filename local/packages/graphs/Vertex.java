@@ -13,6 +13,14 @@ public class Vertex {
         id++;
     }
 
+    public Boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(Boolean state) {
+        visited = state;
+    }
+
     public String getName() {
         return name;
     }
